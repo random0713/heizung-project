@@ -1,0 +1,25 @@
+
+	
+		<div class = "temperature">
+			<h2> {{ort}}</h2></br>
+			<h2> {{readableDate}}</h2>
+			<a href="/get-data"></a>
+			<div>
+				{{#each items}}
+					<article class="item">
+						<div>{{this.newTemperature}} °C</div>
+					</article>
+				{{/each}}
+			</div>
+		
+	
+		<div class= "update">
+			<form action="/" method="post">
+				<div class="input">
+					<label> Insert temperature </label>
+					<input type="text" name="newTemperature">
+				</div>
+				<button type= "submit">Change temperature</button>
+			</form>
+		</div>
+		
